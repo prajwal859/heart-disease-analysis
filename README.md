@@ -16,7 +16,6 @@ heart-disease-analysis/
 │
 ├── data/ # Raw dataset (heart_disease.csv)
 ├── notebooks/ # Jupyter notebook with full analysis
-├── src/ # Python scripts (if any)
 ├── results/ # Outputs: models, scaler, visualizations, summary
 ├── .gitignore # Files to ignore
 ├── README.md # Project overview (this file)
