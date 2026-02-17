@@ -1,0 +1,40 @@
+
+# Heart Disease Prediction Project Summary
+
+## Data Overview
+- Total samples: 10000
+- Features: 23 after encoding
+- Target distribution: 80% No Heart Disease, 20% Heart Disease (imbalanced)
+
+## Data Processing
+- Handled missing values: Filled categorical with mode, numerical with median
+- Encoded categorical variables: Binary mapping for Yes/No, ordinal for Low/Medium/High, one-hot for Alcohol Consumption
+- Scaled numerical features using StandardScaler
+
+## Model Performance
+We used Logistic Regression with balanced class weights to handle imbalance.
+- Test set accuracy: 0.507
+- ROC-AUC score: 0.472
+- Chosen decision threshold: 0.5
+
+### Classification Report at threshold 0.5:
+              precision    recall  f1-score   support
+
+           0       0.79      0.53      0.63      1600
+           1       0.18      0.42      0.26       400
+
+    accuracy                           0.51      2000
+   macro avg       0.48      0.48      0.44      2000
+weighted avg       0.67      0.51      0.56      2000
+
+
+## Limitations
+- The model's performance is modest, likely due to weak predictive signals in the dataset and class imbalance.
+- Precision for the positive class is low, meaning many false positives.
+- Recall is moderate, catching about 42% of actual heart disease cases.
+
+## Future Improvements
+- Collect additional features (e.g., family history, genetic markers, detailed lifestyle data)
+- Try ensemble methods like XGBoost with hyperparameter tuning
+- Use SMOTE for synthetic oversampling
+- Gather more data, especially for the minority class
